@@ -44,9 +44,9 @@ int main(){
     // Variable declarations
     std::string desc;
     int miles;
-    float gallons;      
-    float mpg;
-    float lpk;
+    float gallons, liters;      
+    float mpg, lkm, km;
+  
 
     // Prompt for user inputs
     // Ensure that when typing input in the console, you give a whole number for miles,
@@ -60,14 +60,20 @@ int main(){
 
     // Calculate the results
     mpg = miles / gallons;
-    lpk = mpg * 235.21;
+    liters = gallons*LITERS_PER_GALLON;
+    km = miles*KM_PER_MILE;
+    lkm = liters / km * 100;
 
     // Print the user inputs and final results
     std::cout<<"\n";
     std::cout<<"Fuel efficiency of your " + desc + ":"<<std::endl;
     std::cout<<"You drove " << miles << " miles and used " << gallons << " gallons."<<std::endl;
     std::cout<<"Your fuel efficiency is " << mpg << " miles per gallon."<<std::endl;
-    std::cout<<"Your fuel efficiency is " << lpk << " liters per 100km."<<std::endl;
+
+     std::cout<<"\n";
+    std::cout<<"Fuel efficiency of your " + desc + ":"<<std::endl;
+    std::cout<<"You drove " << km << " km and used " << liters << " liters."<<std::endl;
+    std::cout<<"Your fuel efficiency is " << lkm << " liters per km."<<std::endl;
 
     return 0;
 }
