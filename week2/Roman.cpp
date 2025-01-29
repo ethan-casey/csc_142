@@ -47,11 +47,43 @@ int main() {
     int num;
 
     do {
-        std::cout<<"Enter a number between 1-10";
+        std::cout<<"Enter a number between 1-10: ";
         std::cin>>num;
+
+        if (num < 1 || num > 10) {
+            std::cout<<" Invalid number try again ";
+        }
     } while (num < 1 || num > 10);
 
-    
-
+    if (num == 1) {
+        std::cout<<"I";
+    }
+    else if (num== 2) {
+        std::cout<<"II";
+    }
+    else if (num== 3) {
+        std::cout<<"III";
+    }
+    else if (num== 4) {
+        std::cout<<"IV";
+    }
+    else if (num== 5) {
+        std::cout<<"V";
+    }
+    else if (num== 6) {
+        std::cout<<"VI";
+    }
+    else if (num== 7) {
+        std::cout<<"VII";
+    }
+    else if (num== 8) {
+        std::cout<<"VIII";
+    }
+    else if (num== 9) {
+        std::cout<<"IX";
+    }
+    else if (num== 10) {
+        std::cout<<"X";
+    }
 
 }
