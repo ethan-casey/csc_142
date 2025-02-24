@@ -167,10 +167,18 @@ int main(){
     Book bookThree = Book("0134743350", "Harvey Deitel", "Java How to Program, Early Objects",
                 12, "PE", 134.84);
 
-    std::cout<<"The information for the books look like this:\n";
-    printf("%5s | %5s | %5s | %5d | %5s | %2d", bookOne)
-
+                std::cout << "-----------------------------------------------------------------------------------------" << std::endl;
+                std::cout << "ISBN        AUTHOR          TITLE                                       ED  PUB     PRICE" << std::endl;
+                std::cout << "-----------------------------------------------------------------------------------------" << std::endl;
+                bookOne.print();
+                bookTwo.print();
+                bookThree.print();
+                std::cout << "-----------------------------------------------------------------------------------------" << std::endl;
+            
+    
+                return 0;
 
     
+
 
 }

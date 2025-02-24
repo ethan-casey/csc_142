@@ -19,12 +19,27 @@ class Book {
             price = pr;
         }
 
-        inline double changePrice(){
-            return price;
+        inline std::string getCodenum(){return codeNum;}
+        inline std::string getAuthor(){return author;}
+        inline std::string getTitle(){return title;}
+        inline int getEdition(){return edition;}
+        inline std::string getPubCode(){return pubCode;}
+        inline double getPrice(){return price;}
+        
+        void changePrice(double newPrice) {
+            price = newPrice;
         }
-        inline void getPrice(double pr){
-            price = pr;
+
+        void print() const {
+            std::cout << std::left << std::setw(12) << codeNum
+                      << std::left << std::setw(16) << author
+                      << std::left << std::setw(43) << title 
+                      << std::right << std::setw(3) << edition
+                      << std::right << std::setw(5) << pubCode
+                      << std::right << std::setw(8) << price
+                      << std::endl;
         }
+       
 
 
 };
