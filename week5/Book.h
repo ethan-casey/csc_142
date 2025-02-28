@@ -10,6 +10,7 @@ class Book {
         double price;
     
     public:
+        Book(){}
         Book(std::string cn, std::string au, std::string ti, int ed, std::string pc, double pr) {
             codeNum = cn;
             author = au;
