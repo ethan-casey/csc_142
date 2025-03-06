@@ -9,6 +9,7 @@ class BookRe {
         double price;
 
     public:
+        BookRe(){};
         BookRe(std::string cn, std::string au, std::string ti, int ed, std::string pc, double pr){
             codeNum = cn;
             author = au;

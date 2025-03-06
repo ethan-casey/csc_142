@@ -140,3 +140,49 @@ Finishing Up:
             - InventoryTester.cpp
 
 */
+#include <iostream>
+#include "BookRedo.h"
+#include "InventoryRedo.h"
+
+int main(){
+    
+    InventoryRe InventoryRe(10);
+
+    BookRe book1("013478796X", "Tony Gaddis", 
+            "Starting Out With Java: From Control Structures through Data Structures", 
+            4, "PE", 118.30);
+    BookRe book2("0321409493", "John Lewis", 
+            "Java Software Solutions: Foundations of Program Design", 
+            5, "AW", 94.05);
+    BookRe book3("0134743350", "Harvey Deitel", "Java How to Program, Early Objects",
+            12, "PE", 134.84);
+    BookRe book4("013478796X", "Tony Gaddis",
+         "Starting Out With Java: From Control Structures through Data Structures",
+          4, "PE", 121.75);
+    BookRe book5("0321409493", "John Lewis",
+         "Java Software Solutions: Foundations of Program Design",
+          5, "AW", 94.00);
+    BookRe book6("0134743350", "Harvey Deitel", "Java How to Program, Early Objects", 12,
+        "PE", 134.84);
+    BookRe book7("002360692X", "Richard Johnsonbaugh", "Algorithms", 1, "PH", 109.00);
+    BookRe book8("1593276036", "Eric Matthes", "Python Crash Course", 1, "NS", 39.95);
+    BookRe book9("0143067889", "Ray Kurzweil", "The Singularity is Near", 1, "PG", 17.70);
+
+    InventoryRe.addBook(book1);
+    InventoryRe.addBook(book2);
+    InventoryRe.addBook(book3);
+    InventoryRe.addBook(book4);
+    InventoryRe.addBook(book5);
+    InventoryRe.addBook(book6);
+    InventoryRe.addBook(book7);
+    InventoryRe.addBook(book8);
+    InventoryRe.addBook(book9);
+
+    InventoryRe.printInventory();
+
+    InventoryRe.changePrice("013478796X", 50.00);
+    InventoryRe.changePrice("0143067889", 9.95);
+    InventoryRe.changePrice("0134743350", 100.00);
+
+    InventoryRe.printInventory();
+}
