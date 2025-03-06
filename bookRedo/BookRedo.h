@@ -29,4 +29,25 @@ class BookRe {
         void changePrice(double newPrice){
             price = newPrice;
         }
+        
+    friend std::ostream& operator<<(std::ostream& output, BookRe book){
+        output  << "ISBN: " << book.getISBN() << "\n"
+                << "Author: " << book.getAuthor() << "\n"
+                << "Title: " << book.getTitle() << "\n"
+                << "Edition: " << book.getEdition() << "\n"
+                << "Publication Code: " << book.getPubCode() << "\n"
+                << "Price: $" << book.getPrice();
+        
+        return output;
+    };
+
+    friend bool operator==(BookRe mainBook, BookRe otherBook){
+        if (mainBook.getISBN() == otherBook.getISBN()) {
+            return true;
+        } else {
+            std::cout << "These are not the same" << std::endl;
+            return false;
+        };
+    }
+        
 };

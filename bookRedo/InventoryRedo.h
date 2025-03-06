@@ -18,7 +18,14 @@ class InventoryRe{
         };
         bool addBook(BookRe theBook){
             if (nextEntry >= length){
+                std::cout<<"ERROR too many books";
                 return false;
+            }
+            for (int i = 0; i < nextEntry; i++) {
+                if (books[i].getISBN() == theBook.getISBN()) {
+                    std::cout<<"\nERROR this book can't be added: "<<theBook.getISBN();
+                    return false;
+                }
             }
             books[nextEntry] = theBook;
             nextEntry++;
@@ -34,12 +41,7 @@ class InventoryRe{
         };
         void printInventory(){
             for (int i = 0; i < nextEntry; i++) {
-                std::cout << books[i].getISBN() << " "
-                          << books[i].getAuthor() << " "
-                          << books[i].getTitle() << " "
-                          << books[i].getEdition() << " "
-                          << books[i].getPubCode() << " "
-                          << books[i].getPrice() << std::endl;
+                std::cout;
             };
         };
 };

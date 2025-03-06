@@ -167,6 +167,8 @@ int main(){
     BookRe book7("002360692X", "Richard Johnsonbaugh", "Algorithms", 1, "PH", 109.00);
     BookRe book8("1593276036", "Eric Matthes", "Python Crash Course", 1, "NS", 39.95);
     BookRe book9("0143067889", "Ray Kurzweil", "The Singularity is Near", 1, "PG", 17.70);
+    BookRe book10("0134444329", "Tony Gaddis", "Starting Out With Python", 4, "PE", 99.95);
+    BookRe book11("0133582736", "Tony Gaddis", "Starting Out With Python", 3, "PE", 19.95);
 
     InventoryRe.addBook(book1);
     InventoryRe.addBook(book2);
@@ -177,6 +179,8 @@ int main(){
     InventoryRe.addBook(book7);
     InventoryRe.addBook(book8);
     InventoryRe.addBook(book9);
+    InventoryRe.addBook(book10);
+    InventoryRe.addBook(book11);
 
     InventoryRe.printInventory();
 
