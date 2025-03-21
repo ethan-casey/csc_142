@@ -1,12 +1,25 @@
-#include <string>
+#include <iostream>
 
-	std::string sayHello(){ 
-         return "Hello"; 
-}
-	
-	int main(){
-std::string someText = "Hello World";
-int value = 25;
 
-printf( "%-15.10s  |  %5d  |  %8s", someText.c_str(), value, sayHello().c_str() ); 
+int main() {
+	// Is arrayOne the same as arrayTwo?
+    int arrayOne[5]={2,4,6,8,10};
+    int arrayTwo[5]={2,4,6,8,10};
+
+
+        if (arrayOne == arrayTwo){
+            printf ("They are the same.\n"); }
+        else {
+            printf ("They are NOT the same.\n"); }
+       
+
+
+// Print the memory addresses
+std::cout << arrayOne << "\n";
+std::cout << arrayTwo << "\n";
+
+
+return 0;
+
+
 }
